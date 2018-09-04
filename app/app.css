@@ -1,3 +1,28 @@
 body {
   padding-top: 20px;
 }
+
+.content-container {
+  display: flex;
+  margin: 5%;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.content-child {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  align-items: center;
+  width: 100%;
+}
+
+.content-child-card {
+  display: flex;
+  width: 40rem;
+  margin: 2%;
+}
+
+layout-wrap {
+  width: 20rem;
+}
