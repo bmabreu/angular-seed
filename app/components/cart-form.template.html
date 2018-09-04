@@ -1,6 +1,7 @@
 <div>
     <form name="cartForm" class="css-form">
 
+
         <!-- USERNAME FORM & VALIDATION -->
         <md-input-container>
             <label>
@@ -75,50 +76,42 @@
             </span>
         </md-input-container>
 
-        <!-- STATE OPTIONS -->
 
+        <!-- STATE OPTIONS -->
         <md-input-container>
             <label>State:</label>
             <md-select ng-model="user" placeholder="Select a state">
                 <md-option ng-value="user" ng-repeat="user in state">{{ user.state }}
             </md-select>
+
         </md-input-container>
 
 
         <!-- GENDER FORM & VALIDATION -->
-        <br/>
-        <label aria-label="gender">
-            Gender:
-        </label>
-        <md-checkbox>
-            <label>
-                Male
-            </label>
-            <!-- <input type="checkbox" ng-model="user.gender" value="male" /> -->
-        </md-checkbox>
-
-        <md-checkbox>
-            <label>
-                Female
-            </label>
-            <!-- <input type="checkbox" ng-model="user.gender" value="female" /> -->
-        </md-checkbox>
-
-        <br/>
-
+        <md-input-container>
+            <label>Gender:</label>
+            <md-select ng-model="userGen" placeholder="Select your gender">
+                <md-option ng-value="userGen" ng-repeat="userGen in gender">
+                    {{userGen.gender}}
+            </md-select>
+        </md-input-container>
 
         <!-- AGREE FORM & VALIDATION -->
+        <md-checkbox aria-label="agree">
+            I agree to all of the above.
 
-        <label> I agree:
-            <input type="checkbox" ng-model="user.agree" name="userAgree" required />
-        </label>
-
-        <input ng-show="user.agree" type="text" ng-model="user.agreeSign" required />
+            <span ng-hide="cartForm.agree.$pristine">
+                <div ng-messages="cartForm.agree.$error" style="color:red" role="alert">
+                    <div ng-message="required">Must be selected to move on.</div>
+                </div>
+            </span>
+        </md-checkbox>
 
 
         <!-- RESET AND SUBMIT BUTTONS -->
-        <input type="button" ng-click="reset(form)" value="Reset" />
-        <input type="submit" ng-click="update(user)" value="Submit" />
+        <!-- <input type="button" ng-click="reset(form)" value="Reset" /> -->
+
+        <button mat-raised-button>Submit</button>
 
     </form>
 
