@@ -72,26 +72,26 @@
         Gender:
         <label> Male:
             <input type="radio" ng-model="user.gender" value="male" />
-        </label>
+            <!-- </label> -->
 
-        <label> Female:
-            <input type="radio" ng-model="user.gender" value="female" />
-        </label>
+            <label> Female:
+                <input type="radio" ng-model="user.gender" value="female" />
+            </label>
 
-        <br/>
-
-
-        <!-- AGREE FORM & VALIDATION -->
-        <label> I agree:
-            <input type="checkbox" ng-model="user.agree" name="userAgree" required />
-        </label>
-
-        <input ng-show="user.agree" type="text" ng-model="user.agreeSign" required />
+            <br/>
 
 
-        <!-- RESET AND SUBMIT BUTTONS -->
-        <input type="button" ng-click="reset(form)" value="Reset" />
-        <input type="submit" ng-click="update(user)" value="Submit" />
+            <!-- AGREE FORM & VALIDATION -->
+            <label> I agree:
+                <input type="checkbox" ng-model="user.agree" name="userAgree" required />
+            </label>
+
+            <input ng-show="user.agree" type="text" ng-model="user.agreeSign" required />
+
+
+            <!-- RESET AND SUBMIT BUTTONS -->
+            <input type="button" ng-click="reset(form)" value="Reset" />
+            <input type="submit" ng-click="update(user)" value="Submit" />
 
     </form>
 
