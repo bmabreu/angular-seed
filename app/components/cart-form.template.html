@@ -78,9 +78,9 @@
 
 
         <!-- STATE OPTIONS -->
-        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="start">
             <label>State:</label>
-            <md-select ng-model="uState" name="uState" placeholder="Select a state">
+            <md-select ng-model="uState" name="uState" placeholder="Select a state" required>
                 <md-option ng-value="uState" ng-repeat="uState in state">{{ uState.state }}
             </md-select>
 
@@ -88,7 +88,7 @@
 
 
         <!-- GENDER FORM & VALIDATION -->
-        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="start">
             <label>Gender:</label>
             <md-select name="uGender" ng-model="uGender" placeholder="Select your gender">
                 <md-option ng-value="uGender" ng-repeat="uGender in gender">
@@ -98,8 +98,10 @@
 
 
         <!-- AGREE FORM & VALIDATION -->
-        <md-checkbox name="uAgree" aria-label="uAgree" ng-model="uAgree" layout="row" layout-wrap layout-margin layout-align="center">
-            I agree to all of the above.
+        <md-checkbox name="uAgree" aria-label="uAgree" ng-model="uAgree" layout="row" layout-wrap layout-margin layout-align="center"
+            required>
+
+            All of the above information is correct.
 
             <span ng-hide="cartForm.agree.$pristine">
                 <div ng-messages="cartForm.agree.$error" style="color:red" role="alert">
@@ -114,7 +116,7 @@
             class="md-secondary md-raised">
             Clear</md-button>
 
-        <md-button ng-click="showConfirm($event)" class="md-primary md-raised">
+        <md-button ng-click="showConfirm($event)" class="md-primary md-raised" ng-disabled="!uAgree">
             Submit</md-button>
 
         <div ng-if="status" id="status">
