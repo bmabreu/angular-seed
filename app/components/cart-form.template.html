@@ -7,7 +7,7 @@
             <label>
                 Name:
             </label>
-            <input aria-label="name" matInput type="text" ng-model="user.name" name="uName" required />
+            <input aria-label="uName" matInput type="text" ng-model="uName" name="uName" required />
         </md-input-container>
 
         <span ng-hide="cartForm.uName.$pristine">
@@ -22,7 +22,7 @@
             <label>
                 E-mail:
             </label>
-            <input aria-label="email" type="email" ng-model="user.email" name="uEmail" required />
+            <input aria-label="uEmail" type="email" ng-model="uEmail" name="uEmail" required />
 
             <span ng-hide="cartForm.uEmail.$pristine">
                 <div ng-messages="cartForm.uEmail.$error" style="color:red" role="alert">
@@ -37,7 +37,7 @@
             <label>
                 Address:
             </label>
-            <input aria-label="address" type="address" ng-model="user.address" name="uAddress" required />
+            <input aria-label="uAddress" type="address" ng-model="uAddress" name="uAddress" required />
 
             <span ng-hide="cartForm.uAddress.$pristine">
                 <div ng-messages="cartForm.uAddress.$error" style="color:red" role="alert">
@@ -52,7 +52,7 @@
             <label>
                 Zipcode:
             </label>
-            <input type="zipcode" ng-model="zipcode.email" name="uZipcode" required/>
+            <input type="zipcode" ng-model="uZipcode" name="uZipcode" required/>
 
             <span ng-hide="cartForm.uZipcode.$pristine">
                 <div ng-messages="cartForm.uZipcode.$error" style="color:red" role="alert">
@@ -67,7 +67,7 @@
             <label>
                 City:
             </label>
-            <input type="city" ng-model="city.email" name="uCity" required />
+            <input type="city" ng-model="uCity" name="uCity" required />
 
             <span ng-hide="cartForm.uCity.$pristine">
                 <div ng-messages="cartForm.uCity.$error" style="color:red" role="alert">
@@ -80,8 +80,8 @@
         <!-- STATE OPTIONS -->
         <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>State:</label>
-            <md-select ng-model="stateUser" placeholder="Select a state">
-                <md-option ng-value="stateUser" ng-repeat="stateUser in state">{{ user.state }}
+            <md-select ng-model="uState" name="uState" placeholder="Select a state">
+                <md-option ng-value="uState" ng-repeat="uState in state">{{ uState.state }}
             </md-select>
 
         </md-input-container>
@@ -90,15 +90,15 @@
         <!-- GENDER FORM & VALIDATION -->
         <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>Gender:</label>
-            <md-select ng-model="userGen" placeholder="Select your gender">
-                <md-option ng-value="userGen" ng-repeat="userGen in gender">
-                    {{userGen.gender}}
+            <md-select name="uGender" ng-model="uGender" placeholder="Select your gender">
+                <md-option ng-value="uGender" ng-repeat="uGender in gender">
+                    {{uGender.gender}}
             </md-select>
         </md-input-container>
 
 
         <!-- AGREE FORM & VALIDATION -->
-        <md-checkbox aria-label="agree" layout="row" layout-wrap layout-margin layout-align="center">
+        <md-checkbox name="uAgree" aria-label="uAgree" ng-model="uAgree" layout="row" layout-wrap layout-margin layout-align="center">
             I agree to all of the above.
 
             <span ng-hide="cartForm.agree.$pristine">
@@ -109,8 +109,12 @@
         </md-checkbox>
 
 
-        <!-- SUBMIT BUTTON -->
-        <md-button ng-click="showConfirm($event)" class="md-primary md-raised" layout="row" layout-wrap layout-margin layout-align="center">
+        <!-- CLEAR & SUBMIT BUTTON -->
+        <md-button ng-click="clearValue()" ng-disabled="!(uName || uEmail || uAddress || uZipcode || uCity || stateUser || userGen || uAgree)"
+            class="md-secondary md-raised">
+            Clear</md-button>
+
+        <md-button ng-click="showConfirm($event)" class="md-primary md-raised">
             Submit</md-button>
 
         <div ng-if="status" id="status">

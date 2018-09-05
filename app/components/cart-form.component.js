@@ -49,5 +49,17 @@ angular.module('cartForm').component('cartForm', {
         }
       );
     };
+
+    vm.clearValue = function() {
+      vm.uName = undefined;
+      vm.uEmail = undefined;
+      vm.uAddress = undefined;
+      vm.uZipcode = undefined;
+      vm.uCity = undefined;
+      vm.uState = undefined;
+      vm.uGender = undefined;
+      vm.uAgree = undefined;
+      vm.cartForm.$setPristine();
+    };
   }
 });
