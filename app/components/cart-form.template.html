@@ -7,7 +7,7 @@
             <label>
                 Name:
             </label>
-            <input aria-label="uName" matInput type="text" ng-model="uName" name="uName" required />
+            <input matInput type="text" ng-model="uName" name="uName" required />
         </md-input-container>
 
         <span ng-hide="cartForm.uName.$pristine">
@@ -22,7 +22,7 @@
             <label>
                 E-mail:
             </label>
-            <input aria-label="uEmail" type="email" ng-model="uEmail" name="uEmail" required />
+            <input type="email" ng-model="uEmail" name="uEmail" required />
 
             <span ng-hide="cartForm.uEmail.$pristine">
                 <div ng-messages="cartForm.uEmail.$error" style="color:red" role="alert">
@@ -37,7 +37,7 @@
             <label>
                 Address:
             </label>
-            <input aria-label="uAddress" type="address" ng-model="uAddress" name="uAddress" required />
+            <input type="address" ng-model="uAddress" name="uAddress" required />
 
             <span ng-hide="cartForm.uAddress.$pristine">
                 <div ng-messages="cartForm.uAddress.$error" style="color:red" role="alert">
@@ -98,11 +98,8 @@
 
 
         <!-- AGREE FORM & VALIDATION -->
-        <md-checkbox name="uAgree" aria-label="uAgree" ng-model="uAgree" layout="row" layout-wrap layout-margin layout-align="center"
-            required>
-
-            All of the above information is correct.
-
+        <md-checkbox name="uAgree" ng-model="uAgree" layout="row" layout-wrap layout-margin layout-align="start" required> All
+            of the above information is correct.
             <span ng-hide="cartForm.agree.$pristine">
                 <div ng-messages="cartForm.agree.$error" style="color:red" role="alert">
                     <div ng-message="required">Must be selected to move on.</div>
