@@ -1,9 +1,9 @@
-<div layout="row" layout-wrap="" layout-margin="" layout-align="left">
+<div layout="row" layout-wrap layout-margin layout-align="left">
     <form name="cartForm" class="css-form">
 
 
         <!-- USERNAME FORM & VALIDATION -->
-        <md-input-container layout="row" layout-wrap="" layout-margin="" layout-align="center">
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>
                 Name:
             </label>
@@ -18,7 +18,7 @@
 
 
         <!-- EMAIL FORM & VALIDATION -->
-        <md-input-container layout="row" layout-wrap="" layout-margin="" layout-align="center">
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>
                 E-mail:
             </label>
@@ -33,7 +33,7 @@
 
 
         <!-- ADDRESS FORM & VALIDATION -->
-        <md-input-container layout="row" layout-wrap="" layout-margin="" layout-align="center">
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>
                 Address:
             </label>
@@ -48,7 +48,7 @@
 
 
         <!-- ZIPCODE FORM & VALIDATION -->
-        <md-input-container layout="row" layout-wrap="" layout-margin="" layout-align="center">
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>
                 Zipcode:
             </label>
@@ -63,7 +63,7 @@
 
 
         <!-- CITY FORM & VALIDATION -->
-        <md-input-container layout="row" layout-wrap="" layout-margin="" layout-align="center">
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>
                 City:
             </label>
@@ -78,7 +78,7 @@
 
 
         <!-- STATE OPTIONS -->
-        <md-input-container layout="row" layout-wrap="" layout-margin="" layout-align="center">
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>State:</label>
             <md-select ng-model="stateUser" placeholder="Select a state">
                 <md-option ng-value="stateUser" ng-repeat="stateUser in state">{{ user.state }}
@@ -88,7 +88,7 @@
 
 
         <!-- GENDER FORM & VALIDATION -->
-        <md-input-container layout="row" layout-wrap="" layout-margin="" layout-align="center">
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>Gender:</label>
             <md-select ng-model="userGen" placeholder="Select your gender">
                 <md-option ng-value="userGen" ng-repeat="userGen in gender">
@@ -98,7 +98,7 @@
 
 
         <!-- AGREE FORM & VALIDATION -->
-        <md-checkbox aria-label="agree" layout="row" layout-wrap="" layout-margin="" layout-align="center">
+        <md-checkbox aria-label="agree" layout="row" layout-wrap layout-margin layout-align="center">
             I agree to all of the above.
 
             <span ng-hide="cartForm.agree.$pristine">
@@ -110,7 +110,7 @@
 
 
         <!-- SUBMIT BUTTON -->
-        <md-button ng-click="showConfirm($event)" class="md-primary md-raised" layout="row" layout-wrap="" layout-margin="" layout-align="center">
+        <md-button ng-click="showConfirm($event)" class="md-primary md-raised" layout="row" layout-wrap layout-margin layout-align="center">
             Submit</md-button>
 
         <div ng-if="status" id="status">
