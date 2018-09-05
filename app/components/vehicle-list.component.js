@@ -38,10 +38,6 @@ angular.module("vehicleList").component("vehicleList", {
     };
 
     function DialogController($scope, $mdDialog, locals) {
-      $http.get("./vehicles.json").then(res => {
-        this.vehicle = res.data[$routeParams.vehicleId];
-        console.log("CURRENT", this.vehicle);
-      });
 
       $scope.vehicles = locals.vehicles;
       console.log(vm.vehicles);
@@ -57,31 +53,5 @@ angular.module("vehicleList").component("vehicleList", {
         $mdDialog.hide(answer);
       };
     }
-    // function showCustomGreeting($event) {
-    //   $mdDialog.show({
-    //     targetEvent: $event,
-    //     template:
-    //       "<md-dialog>" +
-    //       "  <md-content>{{make}}</md-content>" +
-    //       '  <div class="md-actions">' +
-    //       '    <md-button ng-click="closeDialog()">' +
-    //       "      Close Greeting" +
-    //       "    </md-button>" +
-    //       "  </div>" +
-    //       "</md-dialog>",
-    //     controller: "GreetingController",
-    //     locals: { make: vm.vehicles.make }
-    //   });
-    //   function GreetingController($scope, $mdDialog, employee) {
-    //     // Assigned from construction <code>locals</code> options...
-    //     $scope.make = make;
-
-    //     $scope.closeDialog = function() {
-    //       // Easily hides most recent dialog shown...
-    //       // no specific instance reference is needed.
-    //       $mdDialog.hide();
-    //     };
-    //   }
-    // }
   }
 });
