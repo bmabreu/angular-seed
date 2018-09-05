@@ -14,9 +14,7 @@
                 <div ng-repeat="vehicle in vehicles">
                     <h2>{{vehicle.make}}</h2>
                     <h2>{{vehicle.model}}</h2>
-                    <a href="#!/vehicles/{{ vehicle.id }}" class="thumb">
-                        <img ng-src="{{ vehicle.imageURL }}" class="md-card-image" alt="Washed Out">
-                    </a>
+                    <img ng-src="{{ vehicle.imageURL }}" class="md-card-image" alt="Washed Out">
                     <p> {{ vehicle.description }} </p>
                 </div>
             </div>
