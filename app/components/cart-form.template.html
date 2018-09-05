@@ -98,8 +98,9 @@
 
 
         <!-- AGREE FORM & VALIDATION -->
-        <md-checkbox name="uAgree" ng-model="uAgree" layout="row" layout-wrap layout-margin layout-align="start" required> All
-            of the above information is correct.
+        <md-checkbox name="uAgree" ng-model="uAgree" layout="row" layout-wrap layout-margin layout-align="start"> All of
+            the above information is correct.
+
             <span ng-hide="cartForm.agree.$pristine">
                 <div ng-messages="cartForm.agree.$error" style="color:red" role="alert">
                     <div ng-message="required">Must be selected to move on.</div>
