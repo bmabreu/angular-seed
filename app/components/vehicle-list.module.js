@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Define the `vehicleList` module
-angular.module('vehicleList', []);
+angular.module("vehicleList", ["ngMaterial"]);
