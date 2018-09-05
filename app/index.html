@@ -57,17 +57,20 @@
 
 <body>
 
-  <div>
-    <nav class="navbar navbar-light bg-light justify-content-between">
-      <a href="#!/vehicles" class="navbar-brand">Silver-Share</a>
-      <a href="#!/cartform">
-        <i class="material-icons">
-          shopping_cart
-        </i>
-      </a>
-    </nav>
-  </div>
+  <mat-toolbar color="primary">
 
+    <a href="#!/vehicles">
+      <span class="nav-title"> Silver Share </span>
+    </a>
+
+    <mat-toolbar-row>
+      <span class="nav-spacer"></span>
+      <a href="#!/cartform">
+        <i class="nav-icon material-icons">shopping_cart</i>
+      </a>
+    </mat-toolbar-row>
+
+  </mat-toolbar>
 
   <div ng-view></div>
 

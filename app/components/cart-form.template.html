@@ -1,9 +1,9 @@
-<div>
+<div layout="row" layout-wrap layout-margin layout-align="left">
     <form name="cartForm" class="css-form">
 
 
         <!-- USERNAME FORM & VALIDATION -->
-        <md-input-container>
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>
                 Name:
             </label>
@@ -18,7 +18,7 @@
 
 
         <!-- EMAIL FORM & VALIDATION -->
-        <md-input-container>
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>
                 E-mail:
             </label>
@@ -33,7 +33,7 @@
 
 
         <!-- ADDRESS FORM & VALIDATION -->
-        <md-input-container>
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>
                 Address:
             </label>
@@ -48,7 +48,7 @@
 
 
         <!-- ZIPCODE FORM & VALIDATION -->
-        <md-input-container>
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>
                 Zipcode:
             </label>
@@ -63,7 +63,7 @@
 
 
         <!-- CITY FORM & VALIDATION -->
-        <md-input-container>
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>
                 City:
             </label>
@@ -78,17 +78,17 @@
 
 
         <!-- STATE OPTIONS -->
-        <md-input-container>
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>State:</label>
-            <md-select ng-model="user" placeholder="Select a state">
-                <md-option ng-value="user" ng-repeat="user in state">{{ user.state }}
+            <md-select ng-model="stateUser" placeholder="Select a state">
+                <md-option ng-value="stateUser" ng-repeat="stateUser in state">{{ user.state }}
             </md-select>
 
         </md-input-container>
 
 
         <!-- GENDER FORM & VALIDATION -->
-        <md-input-container>
+        <md-input-container layout="row" layout-wrap layout-margin layout-align="center">
             <label>Gender:</label>
             <md-select ng-model="userGen" placeholder="Select your gender">
                 <md-option ng-value="userGen" ng-repeat="userGen in gender">
@@ -96,8 +96,9 @@
             </md-select>
         </md-input-container>
 
+
         <!-- AGREE FORM & VALIDATION -->
-        <md-checkbox aria-label="agree">
+        <md-checkbox aria-label="agree" layout="row" layout-wrap layout-margin layout-align="center">
             I agree to all of the above.
 
             <span ng-hide="cartForm.agree.$pristine">
@@ -108,10 +109,15 @@
         </md-checkbox>
 
 
-        <!-- RESET AND SUBMIT BUTTONS -->
-        <!-- <input type="button" ng-click="reset(form)" value="Reset" /> -->
+        <!-- SUBMIT BUTTON -->
+        <md-button ng-click="showConfirm($event)" class="md-primary md-raised" layout="row" layout-wrap layout-margin layout-align="center">
+            Submit</md-button>
 
-        <button mat-raised-button>Submit</button>
+        <div ng-if="status" id="status">
+            <b layour="row" layout-align="center center" class="md-padding">
+                {{status}}
+            </b>
+        </div>
 
     </form>
 

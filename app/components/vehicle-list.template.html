@@ -15,7 +15,7 @@
     </p>
 </div>
 <md-content>
-  <div flex-xs flex-gt-xs="50" layout="row" >
+  <div flex-xs flex-gt-xs="50" layout="row">
     <md-card>
       <mat-grid-title ng-repeat="vehicle in vehicles | filter: vm.query | orderBy: vm.orderProp " class="thumbnail">
         <a href="#!/vehicles/{{ vehicle.id }}" class="thumb">
@@ -31,9 +31,9 @@
         </md-card-content>
         <mat-grid-title/>
     </md-card>
-    <div/>
-    <md-content/>
-    <div>
-    </div>
-    </mat-grid-list>
+  </div>
+  <md-content/>
+  <div>
+  </div>
+  </mat-grid-list>
   </div>
