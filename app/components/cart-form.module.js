@@ -1,3 +1,3 @@
-"use strict";
+'use strict';
 
-angular.module("cartForm", ["ngRoute", "ngMessages", "ngMaterial"]);
+angular.module('cartForm', ['ngRoute', 'ngMessages', 'ngMaterial']);
