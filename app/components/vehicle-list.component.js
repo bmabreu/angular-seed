@@ -30,14 +30,15 @@ angular.module('vehicleList').component('vehicleList', {
       });
     };
 
-    function DialogController($scope, $mdDialog, locals) {
+    function DialogController($scope, locals) {
       let vm = $scope;
       vm.vehicles = locals.vehicles;
       vm.id = locals.id;
     }
 
     vm.go = function(path) {
-      $location.path(path);
+      $location.url(path);
+      //console.log($location.path());
     };
   }
 });

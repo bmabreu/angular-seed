@@ -21,7 +21,7 @@
     <md-content class="md-padding" layout-xs="column">
       <div ng-repeat="vehicle in vehicles | filter: vm.query | orderBy: vm.orderProp" flex-xs flex-gt-xs="30">
         <md-card>
-          <md-card-title ng-click="go('#!/vehicles/{{vehicle.id}}')">
+          <md-card-title ng-click="go('/vehicles/3')">
             <md-card-title-text>
               <span class="md-headline">{{vehicle.make}} {{vehicle.model}}</span>
               <span class="md-subhead">{{vehicle.description}}</span>
