@@ -20,7 +20,7 @@
       <md-card>
         <mat-grid-title ng-repeat="vehicle in vehicles | filter: vm.query | orderBy: vm.orderProp " class="thumbnail ">
           <a href="#!/vehicles/{{ vehicle.id }} " class="thumb ">
-            <img ng-src="{{ vehicle.imageURL }} " class="md-card-image " alt="Washed Out ">
+            <img ng-src="{{ vehicle.imageURL }} " class="md-card-image ">
           </a>
           <md-card-title>
             <md-card-title-text>
@@ -30,6 +30,9 @@
           <md-card-content>
             <p> {{ vehicle.description }} </p>
           </md-card-content>
+          <md-button class="md-primary md-raised" ng-click="showAdvanced($event, vehicle.id)">
+            Details
+          </md-button>
         </mat-grid-title>
       </md-card>
     </div>
