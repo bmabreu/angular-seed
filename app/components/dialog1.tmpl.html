@@ -4,16 +4,17 @@
             <div class="md-toolbar-tools">
                 <h2>Vehicle Details</h2>
                 <span flex></span>
-                <md-button aria-label="cancel" class="md-icon-button" ng-click="cancel()">
-                </md-button>
             </div>
         </md-toolbar>
 
         <md-dialog-content>
             <div ng-repeat="vehicle in vehicles" class="md-dialog-content">
-                <h2>{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</h2>
-                <img ng-src="{{ vehicle.imageURL }}" class="md-card-image">
-                <p> {{ vehicle.description }} </p>
+                <h1>{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</h1>
+                <span flex></span>
+                <div layout="row">
+                    <img style="padding: 3%" src="{{ vehicle.imageURL }}" class="md-card-image">
+                    <h4 style="padding: 2%;"> {{ vehicle.description }} </h4>
+                </div>
             </div>
         </md-dialog-content>
     </form>

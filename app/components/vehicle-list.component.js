@@ -5,7 +5,7 @@ angular.module('vehicleList').component('vehicleList', {
 
   templateUrl: 'components/vehicle-list.template.html',
 
-  controller: function VehicleController($scope, $http, $mdDialog) {
+  controller: function VehicleController($scope, $http, $mdDialog, $location) {
     let vm = $scope;
 
     vm.orderProp = 'year';
@@ -35,5 +35,9 @@ angular.module('vehicleList').component('vehicleList', {
       vm.vehicles = locals.vehicles;
       vm.id = locals.id;
     }
+
+    vm.go = function(path) {
+      $location.path(path);
+    };
   }
 });
