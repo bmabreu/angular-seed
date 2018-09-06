@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "outDir": "js",
+    "module": "commonjs",
+    "sourceMap": true,
+    "watch": true,
+    "noImplicitAny": false,
+    "removeComments": true
+  },
+  "files": ["components/vehicle-detail.component.ts"]
+}

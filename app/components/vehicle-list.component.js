@@ -1,28 +1,28 @@
-"use strict";
+'use strict';
 
-angular.module("vehicleList").component("vehicleList", {
-  controllerAs: "vm",
+angular.module('vehicleList').component('vehicleList', {
+  controllerAs: 'vm',
 
-  templateUrl: "components/vehicle-list.template.html",
+  templateUrl: 'components/vehicle-list.template.html',
 
   controller: function VehicleController($scope, $http, $mdDialog) {
     let vm = $scope;
 
-    vm.orderProp = "year";
+    vm.orderProp = 'year';
     vm.vehicles = [];
 
-    vm.status = "";
+    vm.status = '';
 
-    $http.get("./vehicles.json").then(result => {
+    $http.get('./vehicles.json').then(result => {
       vm.vehicles = result.data;
     });
 
     vm.showAdvanced = function(ev, id) {
-      let vehicle = vm.vehicles[id].id === id ? vm.vehicles[id] : "";
+      let vehicle = vm.vehicles[id].id === id ? vm.vehicles[id] : '';
 
       $mdDialog.show({
         controller: DialogController,
-        templateUrl: "components/dialog1.tmpl.html",
+        templateUrl: 'components/dialog1.tmpl.html',
         parent: angular.element(document.body),
         targetEvent: ev,
         clickOutsideToClose: true,
