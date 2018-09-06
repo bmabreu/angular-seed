@@ -1,0 +1,22 @@
+<table ng-table="vehicleTable" class="table table-striped">
+    <tr ng-repeat="vehicle in vehicles">
+        <td data-title="'Id'">
+            {{vehicle.id}}
+        </td>
+        <td data-title="'Make'">
+            {{vehicle.make}}
+        </td>
+        <td data-title="'Model'">
+            {{vehicle.model}}
+        </td>
+        <td data-title="'Year'">
+            {{vehicle.year}}
+        </td>
+        <td data-title="'Type">
+            {{vehicle.type}}
+        </td>
+        <td data-title="'Color'">
+            {{vehicle.color}}
+        </td>
+    </tr>
+</table>

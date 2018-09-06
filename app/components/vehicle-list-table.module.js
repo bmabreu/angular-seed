@@ -1,4 +1,4 @@
 'use strict';
 
-// Define the `vehicleDetail` module
+// Define the `vehicleListTable` module
 angular.module('vehicleListTable', ['ngTable']);
