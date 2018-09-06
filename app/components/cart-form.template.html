@@ -22,7 +22,7 @@
             <label>
                 E-mail:
             </label>
-            <input type="email" ng-model="uEmail" name="uEmail" required />
+            <input type="email" aria-label="uEmail" ng-model="uEmail" name="uEmail" required />
 
             <span ng-hide="cartForm.uEmail.$pristine">
                 <div ng-messages="cartForm.uEmail.$error" style="color:red" role="alert">
@@ -37,7 +37,7 @@
             <label>
                 Address:
             </label>
-            <input type="address" ng-model="uAddress" name="uAddress" required />
+            <input type="address" aria-label="uAddress" ng-model="uAddress" name="uAddress" required />
 
             <span ng-hide="cartForm.uAddress.$pristine">
                 <div ng-messages="cartForm.uAddress.$error" style="color:red" role="alert">

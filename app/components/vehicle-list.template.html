@@ -1,41 +1,20 @@
 <div>
+  <div layout="row">
 
-  <!--START NAVBAR CONTENT-->
+    <md-input-container class="md-toolbar-tools" flex="40" layout="row">
+      <label>Sort By</label>
+      <md-select name="sortBy" ng-model="vm.orderProp">
+        <md-option value="make ">Make</md-option>
+        <md-option value="year ">Year</md-option>
+      </md-select>
+    </md-input-container>
 
-  <!-- <md-input-container class="md-toolbar-tools">
-        <label>Search</label>
-        <input type="text" name="search" ng-model=" vm.query " />
-      </md-input-container>
+    <md-input-container class="md-toolbar-tools" flex="40" layout="row">
 
-      <md-input-container class="md-toolbar-tools">
-        <label>Sort By</label>
-        <md-select name="sortBy" ng-model="vm.orderProp">
-          <md-option value="make ">Make</md-option>
-          <md-option value="year ">Year</md-option>
-        </md-select>
-      </md-input-container> -->
-
-
-  <md-toolbar class="md-hue-2">
-    <div class="md-toolbar-tools">
-
-      <h2 flex md-truncate>Silver Share</h2>
-
-      <md-button class="md-icon-button" aria-label="shopping-cart">
-        <a href="#!/cartform">
-          <md-icon>
-            <i class="nav-icon material-icons">shopping_cart</i>
-          </md-icon>
-        </a>
-      </md-button>
-
-      <md-button class="md-icon-button" aria-label="More">
-        <i class="nav-icon material-icons">more_vert</i>
-      </md-button>
-    </div>
-  </md-toolbar>
-
-  <!-- END NAVBAR CONTENT -->
+      <body>Search</body>
+      <input type="text" aria-label="search" name="search" ng-model=" vm.query " />
+    </md-input-container>
+  </div>
 
   <md-content>
     <div flex-xs flex-gt-xs="50 " layout="row ">
