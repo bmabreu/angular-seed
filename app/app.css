@@ -32,3 +32,8 @@ body {
   width: 18rem;
   margin: 2%;
 }
+
+md-content {
+  display: flex !important;
+  flex-wrap: wrap;
+}
