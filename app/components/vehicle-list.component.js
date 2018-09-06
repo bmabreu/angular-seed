@@ -17,43 +17,38 @@ angular.module("vehicleList").component("vehicleList", {
       vm.vehicles = result.data;
     });
 
-    $scope.showAdvanced = function(ev, id) {
-      console.log(id, "in show advanced function");
+    vm.showAdvanced = function(ev, id) {
+      let vehicle = vm.vehicles[id].id === id ? vm.vehicles[id] : "";
+
       $mdDialog.show({
         controller: DialogController,
         templateUrl: "components/dialog1.tmpl.html",
         parent: angular.element(document.body),
         targetEvent: ev,
         clickOutsideToClose: true,
-        locals: { vehicles: vm.vehicles, id: id }
+        locals: { vehicles: [vehicle], id: vehicle.id }
       });
     };
 
     function DialogController($scope, $mdDialog, locals) {
-      $scope.vehicles = locals.vehicles;
-      console.log(vm.vehicles);
-      $scope.id = locals.id;
-      console.log(locals.id, "in the controller");
+      let vm = $scope;
 
-      $scope.find = function(id) {
-        $scope.id = locals.id;
-        console.log(id, "in find");
-        $scope.vehicles.filter(vehicles => vehicle.id === locals.id);
-        $mdDialog.find();
+      vm.vehicles = locals.vehicles;
+      vm.id = locals.id;
+
+      vm.choose = function(vehicle) {
+        vm.vehicle = vehicle;
       };
 
-      $scope.choose = function(vehicle) {
-        $scope.vehicle = vehicle;
-      };
-      $scope.hide = function() {
+      vm.hide = function() {
         $mdDialog.hide();
       };
 
-      $scope.cancel = function() {
+      vm.cancel = function() {
         $mdDialog.cancel();
       };
 
-      $scope.answer = function(answer) {
+      vm.answer = function(answer) {
         $mdDialog.hide(answer);
       };
     }
