@@ -36,9 +36,8 @@ angular.module('vehicleList').component('vehicleList', {
       vm.id = locals.id;
     }
 
-    vm.go = function(path) {
-      $location.url(path);
-      //console.log($location.path());
+    vm.go = function(path, id) {
+      $location.url(path + id);
     };
   }
 });
