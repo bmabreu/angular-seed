@@ -10,13 +10,12 @@
         </md-toolbar>
 
         <md-dialog-content>
-            <div class="md-dialog-content">
-                <div ng-repeat="vehicle in vehicles">
-                    <h2>{{vehicle.make}}</h2>
-                    <h2>{{vehicle.model}}</h2>
-                    <img ng-src="{{ vehicle.imageURL }}" class="md-card-image" alt="Washed Out">
-                    <p> {{ vehicle.description }} </p>
-                </div>
+            <div ng-repeat="vehicle in vehicles" class="md-dialog-content">
+                <h2>{{vehicle.id}}</h2>
+                <h2>{{vehicle.make}}</h2>
+                <h2>{{vehicle.model}}</h2>
+                <img ng-src="{{ vehicle.imageURL }}" class="md-card-image" alt="Washed Out">
+                <p> {{ vehicle.description }} </p>
             </div>
         </md-dialog-content>
     </form>
