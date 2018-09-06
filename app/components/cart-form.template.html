@@ -7,7 +7,7 @@
             <label>
                 Name:
             </label>
-            <input matInput type="text" ng-model="uName" name="uName" required />
+            <input type="text" ng-model="uName" name="uName" required />
         </md-input-container>
 
         <span ng-hide="cartForm.uName.$pristine">
@@ -83,7 +83,6 @@
             <md-select ng-model="uState" name="uState" placeholder="Select a state" required>
                 <md-option ng-value="uState" ng-repeat="uState in state">{{ uState.state }}
             </md-select>
-
         </md-input-container>
 
 
