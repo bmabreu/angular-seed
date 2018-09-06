@@ -1,30 +1,30 @@
 <div>
+  <div layout="row">
 
-  <!--Sidebar content-->
-  <p>
-    Search:
-    <input ng-model="vm.query" />
-  </p>
+    <md-input-container class="md-toolbar-tools" flex="40" layout="row">
+      <label>Sort By</label>
+      <md-select name="sortBy" ng-model="vm.orderProp">
+        <md-option value="make ">Make</md-option>
+        <md-option value="year ">Year</md-option>
+      </md-select>
+    </md-input-container>
 
-  <p>
-    Sort by:
-    <select ng-model="vm.orderProp">
-      <option value="make">Make</option>
-      <option value="year">Year</option>
-    </select>
-  </p>
-
+    <md-input-container class="md-toolbar-tools" flex="40" layout="row">
+      <i class="nav-icon material-icons">search</i>
+      <input type="text" aria-label="search" name="search" ng-model=" vm.query " />
+    </md-input-container>
+  </div>
 
   <md-content>
-    <div flex-xs flex-gt-xs="50" layout="row">
+    <div flex-xs flex-gt-xs="50 " layout="row ">
       <md-card>
-        <mat-grid-title ng-repeat="vehicle in vehicles | filter: vm.query | orderBy: vm.orderProp " class="thumbnail">
-          <a href="#!/vehicles/{{ vehicle.id }}" class="thumb">
-            <img ng-src="{{ vehicle.imageURL }}" class="md-card-image" alt="Washed Out">
+        <mat-grid-title ng-repeat="vehicle in vehicles | filter: vm.query | orderBy: vm.orderProp " class="thumbnail ">
+          <a href="#!/vehicles/{{ vehicle.id }} " class="thumb ">
+            <img ng-src="{{ vehicle.imageURL }} " class="md-card-image " alt="Washed Out ">
           </a>
           <md-card-title>
             <md-card-title-text>
-              <a href="#!/vehicles/{{ vehicle.id }}">{{ vehicle.make }} {{ vehicle.model }}</a>
+              <a href="#!/vehicles/{{ vehicle.id }} ">{{ vehicle.make }} {{ vehicle.model }}</a>
             </md-card-title-text>
           </md-card-title>
           <md-card-content>

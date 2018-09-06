@@ -1,6 +1,3 @@
-//import { MatDialog } from '@angular/material';
-//import { SubmitDialogComponent } from './submit-dialog';
-
 ('use strict');
 
 angular.module('cartForm').component('cartForm', {
@@ -60,6 +57,7 @@ angular.module('cartForm').component('cartForm', {
       vm.uGender = undefined;
       vm.uAgree = undefined;
       vm.cartForm.$setPristine();
+      vm.cartForm.$setUntouched();
     };
   }
 });

@@ -7,7 +7,7 @@ body {
 }
 
 .nav-icon {
-  padding: 0 14px;
+  padding: 20;
   font-size: 30px;
 }
 
@@ -19,16 +19,16 @@ body {
   display: flex;
 }
 
-/* .row {
+.row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
   align-items: center;
   width: 100%;
-} */
+}
 
 .card {
   display: flex;
-  width: 20rem;
+  width: 18rem;
   margin: 2%;
 }
