@@ -38,7 +38,8 @@
 
   <script src="app.config.js"></script>
 
-
+  <script src="components/navbar.module.js"></script>
+  <script src="components/navbar.component.js"></script>
 
   <script src="components/vehicle-list.module.js"></script>
   <script src="components/vehicle-list.component.js"></script>
@@ -53,24 +54,24 @@
 
 </head>
 
-<!-- Use a custom component to render a list of vehicles -->
 
 <body>
 
-  <mat-toolbar color="primary">
+  <md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
 
-    <a href="#!/vehicles">
-      <span class="nav-title"> Silver Share </span>
-    </a>
+      <h2 flex md-truncate>Silver Share</h2>
 
-    <mat-toolbar-row>
-      <span class="nav-spacer"></span>
-      <a href="#!/cartform">
-        <i class="nav-icon material-icons">shopping_cart</i>
-      </a>
-    </mat-toolbar-row>
+      <md-button class="md-icon-button" aria-label="list">
+        <a href="#!/cartform">
+          <md-icon>
+            <i class="nav-icon material-icons">list</i>
+          </md-icon>
+        </a>
+      </md-button>
 
-  </mat-toolbar>
+    </div>
+  </md-toolbar>
 
   <div ng-view></div>
 
