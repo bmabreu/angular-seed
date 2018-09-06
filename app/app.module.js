@@ -7,6 +7,5 @@ let myApp = angular.module('myApp', [
   'vehicleDetail',
   'vehicleList',
   'cartForm',
-  'ngMaterial',
-  'navbar'
+  'ngMaterial'
 ]);

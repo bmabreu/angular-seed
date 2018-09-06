@@ -1,6 +1,7 @@
 'use strict';
 
 // Register `vehicleDetail` component, along with its associated controller and template
+
 angular.module('vehicleDetail').component('vehicleDetail', {
   controllerAs: 'vm',
   templateUrl: 'components/vehicle-detail.template.html',
