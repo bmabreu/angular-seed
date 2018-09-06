@@ -32,25 +32,8 @@ angular.module("vehicleList").component("vehicleList", {
 
     function DialogController($scope, $mdDialog, locals) {
       let vm = $scope;
-
       vm.vehicles = locals.vehicles;
       vm.id = locals.id;
-
-      vm.choose = function(vehicle) {
-        vm.vehicle = vehicle;
-      };
-
-      vm.hide = function() {
-        $mdDialog.hide();
-      };
-
-      vm.cancel = function() {
-        $mdDialog.cancel();
-      };
-
-      vm.answer = function(answer) {
-        $mdDialog.hide(answer);
-      };
     }
   }
 });
