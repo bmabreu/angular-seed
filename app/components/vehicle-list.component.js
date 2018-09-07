@@ -13,6 +13,8 @@ angular.module('vehicleList').component('vehicleList', {
 
     vm.status = '';
 
+    vm.state = [{ state: 'New York' }, { state: 'New Jersey' }];
+
     $http.get('./vehicles.json').then(result => {
       vm.vehicles = result.data;
     });
