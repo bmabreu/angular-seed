@@ -21,8 +21,16 @@ myApp.config([
         template: '<vehicle-detail></vehicle-detail>'
       })
       .when('/cartform', {
-        template: '<cart-form></cart-form>'
+        template: '<cart-form state=vm.state></cart-form>'
       })
       .otherwise('/vehicles');
   }
 ]);
+
+myApp.controller('myApp', function($scope) {
+  let vm = $scope;
+
+  vm.hello = function(string) {
+    return string;
+  };
+});
