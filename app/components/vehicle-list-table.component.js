@@ -10,23 +10,30 @@ angular.module("vehicleListTable").component("vehicleListTable", {
 
     $http.get("./vehicles.json").then(result => {
       vm.vehicles = result.data;
+      var self = this;
+      var data = result.data;
+      self.tableParams = new ngTableParams(
+        {
+          page: 1,
+          count: 5
+        },
+        {
+          getData: function($defer, params) {
+            self.data = params.sorting()
+              ? $filter("orderBy")(self.vehicles, params.orderBy())
+              : self.vehicles;
+            self.data = params.filter()
+              ? $filter("filter")(self.data, params.filter())
+              : self.result.data;
+            self.data = self.data.slice(
+              (params.page() - 1) * params.count(),
+              params.page() * params.count()
+            );
+            $defer.resolve(self.data);
+          }
+        }
+        // { dataset: data }
+      );
     });
-
-    // vm.usersTable = new ngTableParams(
-    //   {
-    //     page: 1,
-    //     count: 8
-    //   },
-    //   {
-    //     total: vm.vehicles.length,
-    //     getData: function($defer, params) {
-    //       vm.data = $scope.users.slice(
-    //         (params.page() - 1) * params.count(),
-    //         params.page() * params.count()
-    //       );
-    //       $defer.resolve($scope.data);
-    //     }
-    //   }
-    // );
   }
 });

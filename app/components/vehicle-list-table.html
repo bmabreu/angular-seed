@@ -1,22 +1,16 @@
-<table ng-table="vehicleTable">
+<table ng-table="vm.tableParams" class="table" show-filter="true">
     <tr ng-repeat="vehicle in vehicles">
-        <td data-title="'Id'">
-            {{vehicle.id}}
-        </td>
-        <td data-title="'Make'">
-            {{vehicle.make}}
-        </td>
-        <td data-title="'Model'">
-            {{vehicle.model}}
-        </td>
-        <td data-title="'Year'">
-            {{vehicle.year}}
-        </td>
-        <td data-title="'Type">
-            {{vehicle.type}}
-        </td>
-        <td data-title="'Color'">
-            {{vehicle.color}}
-        </td>
+        <td title="'Id'" filter="{ id: 'text'}" sortable="'id'" filter="{ 'id': 'text' }">
+            {{vehicle.id}}</td>
+        <td title="'Make'" filter="{ Make: 'text'}" sortable="'make'" filter="{ 'make': 'text' }">
+            {{vehicle.make}}</td>
+        <td title="'Model'" filter="{ Model: 'text'}" sortable="'model'" filter="{ 'model': 'text' }">
+            {{vehicle.model}}</td>
+        <td title="'Year'" filter="{ Year: 'text'}" sortable="'year'" filter="{ 'year': 'text' }">
+            {{vehicle.year}}</td>
+        <!-- <td title="'Type" filter="{ Type: 'text'}" sortable="'type'">
+            {{vehicle.type}}</td> -->
+        <td title="'Color'" filter="{ color: 'text'}" sortable="'color'" filter="{ 'color': 'text' }">
+            {{vehicle.color}}</td>
     </tr>
 </table>
