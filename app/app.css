@@ -42,3 +42,8 @@ md-card {
   height: 250px;
   overflow-y: scroll;
 }
+
+md-input-containter {
+  display: flex;
+  flex: 60;
+}
