@@ -16,6 +16,9 @@ angular.module('myApp').config([
       .when('/cartform', {
         template: '<cart-form></cart-form>'
       })
+      .when('/review', {
+        template: '<review></review>'
+      })
       .otherwise('/vehicles');
   }
 ]);
