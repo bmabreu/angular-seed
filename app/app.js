@@ -27,10 +27,10 @@ myApp.config([
   }
 ]);
 
-myApp.controller('myApp', function($scope) {
-  let vm = $scope;
+angular.module('myApp').component('myApp', {
+  controllerAs: 'vm',
 
-  vm.hello = function(string) {
-    return string;
-  };
+  controller: function myAppController($scope) {
+    let vm = $scope;
+  }
 });
