@@ -8,17 +8,15 @@ angular.module('myApp').config([
 
     $routeProvider
       .when('/vehicles', {
-        template: '<vehicle-list></vehicle-list>'
+        template: '<vehicle-list text="hello"></vehicle-list>'
       })
       .when('/vehicles/:vehicleId', {
         template: '<vehicle-detail></vehicle-detail>'
       })
-      .when('/cartform', {
-        template: '<cart-form></cart-form>'
-      })
+      .when('/cartform', { template: '<cart-form></cart-form>' })
       .when('/sample', {
         template:
-          '<sample text="hello" in="outervariable" out="callback"></sample>'
+          '<sample text="hello" inner="" outer="count=0" connection="value"></sample>'
       })
       .otherwise('/vehicles');
   }

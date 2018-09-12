@@ -1,12 +1,22 @@
+<h3> @ BINDING</h3>
 <p>text: <strong>{{vm.text}}</strong></p>
+]
 
-<p> {{outervariable}}<input></p>
-<p>dynamic input: <strong>{{vm.in}}</strong></p>
+<h3> = AND 'LESS THAN' BINDING</h3>
+<input ng-model="vm.inner">
+<p>dynamic input: <strong>{{vm.inner}}</strong></p>
 
+<h3> & BINDING</h3>
 
-
-<p>Amount: {{count}}</p>
+<p>Outer value: {{count}}</p>
 <div>
-  <button ng-click="vm.out(1)">buy one</button>
-  <button ng-click="vm.out(5)">buy many</button>
+  <button ng-click="vm.outer = vm.outer + 1;">buy one</button>
+  <button ng-click="vm.outer = vm.outer + 5;">buy many</button>
+</div>
+
+<h3> MORE EXAMPLES</h3>
+
+<div>
+  <p>outer: <input ng-model="valute"></p>
+  <p>inner: <input ng-model="valute"></p>
 </div>
