@@ -16,6 +16,10 @@ angular.module('myApp').config([
       .when('/cartform', {
         template: '<cart-form></cart-form>'
       })
+      .when('/sample', {
+        template:
+          '<sample text="hello" in="outervariable" out="callback"></sample>'
+      })
       .otherwise('/vehicles');
   }
 ]);
