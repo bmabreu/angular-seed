@@ -4,10 +4,6 @@
 let myApp = angular.module("myApp", [
   "ngRoute",
   "ngMessages",
-  "vehicleDetail",
-  "vehicleList",
-  "cartForm",
   "ngMaterial",
-  "ngTable",
-  "vehicleListTable"
+  "ngTable"
 ]);

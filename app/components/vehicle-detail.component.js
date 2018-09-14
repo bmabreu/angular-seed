@@ -2,7 +2,7 @@
 
 // Register `vehicleDetail` component, along with its associated controller and template
 
-angular.module('vehicleDetail').component('vehicleDetail', {
+angular.module('myApp').component('vehicleDetail', {
   controllerAs: 'vm',
   templateUrl: 'components/vehicle-detail.template.html',
   controller: [

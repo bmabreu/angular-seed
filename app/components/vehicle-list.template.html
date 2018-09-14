@@ -27,9 +27,15 @@
               <span class="md-subhead">{{vehicle.description}}</span>
             </md-card-title-text>
             <md-card-title-media>
+              {{vehicle.rating}}
               <div class="md-media-lg card-media">
                 <img src="{{vehicle.imageURL}}">
+                <br/>
               </div>
+              Likes: {{counter + 1}}
+              <br/>
+              <sample-rating value="callback" text="Hello World" input="" output="count = count + amount"></output>></sample-rating>
+              <br/>
             </md-card-title-media>
           </md-card-title>
           <md-card-actions layout="row" layout-align="end center">

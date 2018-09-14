@@ -1,6 +1,6 @@
 ('use strict');
 
-angular.module('cartForm').component('cartForm', {
+angular.module('myApp').component('cartForm', {
   controllerAs: 'vm',
 
   templateUrl: 'components/cart-form.template.html',
